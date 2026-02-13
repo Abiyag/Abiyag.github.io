@@ -1,0 +1,74 @@
+#name {
+    color: black;
+    text-align: center;
+    border-style: solid;
+    border-color: red;
+    border-radius: 50%;
+}
+#info {
+    color: blue;
+    text-decoration: underline;
+    font: italic;
+    text-align: center;
+    margin-right: 55px;
+}
+/* i made the color of all texts in the body black, however, the color of the "#info" section remains blue
+because The ID selector (#info) overrides element selectors because 
+IDs have higher specificity than classes and elements.
+Specificity order: ID > Class > Element.
+*/
+
+h1 {
+    margin-bottom: 5px;
+}
+
+h4 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+p {
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+img {
+    width: 200px;
+    display: block;
+    margin: 20px auto;
+}
+
+.type {
+    font-style: italic;
+}
+
+.section-title{
+    text-decoration: underline;
+}
+.skills-table {
+    width: 30;
+    border-collapse: collapse;
+    margin-top: 15px;
+    
+}
+
+.skills-table th,
+.skills-table td {
+    border: 1px solid blue;
+    padding: 10px;
+    text-align: left;
+}
+.skills-table th {
+    background-color: aqua;
+    text-decoration: underline;
+    
+}
+.skills-table td {
+    padding: 8px;
+}
+
+body{
+    background-color: whitesmoke;
+    color: black;
+}
