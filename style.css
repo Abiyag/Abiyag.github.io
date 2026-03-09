@@ -14,12 +14,6 @@
     margin-right: 55px;
 }
 
-/* i made the color of all texts in the body black, however, the color of the "#info" section remains blue
-because The ID selector (#info) overrides element selectors because 
-IDs have higher specificity than classes and elements.
-Specificity order: ID > Class > Element.
-*/
-
 h1 {
     margin-bottom: 5px;
 }
@@ -52,7 +46,7 @@ img {
 .skills-table {
     width: 30%;
     border-collapse: collapse;
-    margin-top: 15px;
+    margin: 15px auto;
 }
 
 .skills-table th,
@@ -71,10 +65,15 @@ img {
     padding: 8px;
 }
 
-body {
-    background-color: whitesmoke;
-    color: black;
+body{
+background-color:whitesmoke;
+color:black;
+font-family:Arial, sans-serif;
+margin:0;
+padding:0 20px;
 }
+
+/* NAVBAR */
 
 .navbar {
     display: flex;
@@ -105,6 +104,8 @@ body {
     color: lightblue;
 }
 
+/* PROJECT GRID */
+
 .project-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -116,32 +117,69 @@ body {
     background: white;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px black;
 }
 
-@media (max-width:768px) {
-
-.navbar {
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.nav-links {
-    flex-direction: column;
-    gap: 10px;
-}
-
-.project-grid {
-    grid-template-columns: 1fr;
-}
 .project-card img{
 width:100%;
 border-radius:6px;
 margin-bottom:10px;
 }
 
-body {
-    font-size: 14px;
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+/* NAVBAR STACKS */
+.navbar{
+flex-direction: column;
+align-items: flex-start;
+}
+
+/* NAV LINKS STACK */
+.nav-links{
+flex-direction: column;
+gap: 10px;
+width: 100%;
+}
+
+/* FULL WIDTH LINKS */
+.nav-links li{
+width: 100%;
+}
+
+.nav-links a{
+display: block;
+padding: 10px 0;
+}
+
+/* PROJECT GRID → ONE COLUMN */
+.project-grid{
+grid-template-columns: 1fr;
+}
+
+/* TABLE FULL WIDTH */
+.skills-table{
+width: 100%;
+}
+
+/* IMAGE SMALLER */
+img{
+width: 150px;
+}
+
+/* MOBILE FONTS */
+h1{
+font-size: 24px;
+}
+
+h2{
+font-size: 20px;
+}
+
+body{
+font-size: 14px;
 }
 
 }
